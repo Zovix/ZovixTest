@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.ClientA.cucumber.ZovixTest.AppTest
+Test set: com.ClientA.cucumber.ZovixTest.RunnerClassTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 25, Time elapsed: 0.676 sec

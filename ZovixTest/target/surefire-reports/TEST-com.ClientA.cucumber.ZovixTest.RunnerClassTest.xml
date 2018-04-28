@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="29" failures="0" name="com.ClientA.cucumber.ZovixTest.RunnerClassTest" time="1.303" errors="0" skipped="25">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\My Development\eclipse-workspace\ZovixTest\ZovixTest"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\My Development\eclipse-workspace\ZovixTest\ZovixTest"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Michael\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\My Development\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7713855524455475955.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\FastSum;D:\Program Files\Git\cmd;C:\Users\Michael\AppData\Local\GitHubDesktop\bin;C:\Users\Michael\Desktop;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Michael"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Michael"/>
+    <property name="java.class.path" value="C:\Users\Michael\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.8.3.20180227-2135\jars\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\My Development\eclipse-workspace\ZovixTest\ZovixTest\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Scenario: Make a deposit" name="Given a user access the bank web app" time="0.146">
+    <skipped/>
+    <system-out>Feature: Manage simple transactions in a banking account
+  	In order to manage my money more efficiently
+  	As a bank client
+  	TC_001: I want to make a deposit and withdraw money whenever I need to
+  	TC_002: I want to make a transfer to another bank account whenever I need to
+  	TC_003: I want to make a transfer to an international bank account
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="And logs using the credentials" time="0.148">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="Given my checking account has a balance equal or greater than zero" time="0.153">
+    <skipped/>
+    <system-out>
+  #Login information for generic user so all scenarios will use the same starting point
+  Background:                            &amp;#27;[90m# Sample_bank.feature:9&amp;#27;[0m
+    &amp;#27;[33mGiven &amp;#27;[0m&amp;#27;[33ma user access the bank web app&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()&amp;#27;[0m
+      &amp;#27;[31mcucumber.api.PendingException: TODO: implement me
+      	at com.ClientA.cucumber.ZovixTest.AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app(AC_001_SampleBanking_StepDefinition.java:14)
+      	at ?.Given a user access the bank web app(Sample_bank.feature:10)
+      &amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mlogs using the credentials&amp;#27;[0m       &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="When I deposit 1500 to my checking account" time="0.153">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="Then I should have additional 1500 as balance" time="0.154">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="Scenario: Make a deposit" time="0.154">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Make a deposit" name="Scenario: Make a deposit" time="0.155"/>
+  <testcase classname="| 250 |" name="Given a user access the bank web app" time="0.005">
+    <skipped/>
+    <system-out>
+  @TC_001: @in_progress
+  Scenario: Make a deposit                                             &amp;#27;[90m# Sample_bank.feature:16&amp;#27;[0m
+    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mmy checking account has a balance equal or greater than zero&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.my_checking_account_has_a_balance_equal_or_greater_than_zero()&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI deposit &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1500&amp;#27;[0m&amp;#27;[36m to my checking account&amp;#27;[0m                         &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_deposit_to_my_checking_account(int)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should have additional &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1500&amp;#27;[0m&amp;#27;[36m as balance&amp;#27;[0m                      &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_should_have_additional_as_balance(int)&amp;#27;[0m
+
+  #Include here the parametrization and data for positive and negatice test
+  @TC_002: @sign-off
+  Scenario Outline: Make a withdraw                                                       &amp;#27;[90m# Sample_bank.feature:23&amp;#27;[0m
+    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mmy checking account has balance greater than &lt;withdrawn_amount&gt; before withdraw&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI withdraw &lt;withdrawn_amount&gt; from my checking account&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should have less &lt;withdrawn_amount&gt; as balance&amp;#27;[0m
+
+    Examples: 
+</system-out>
+  </testcase>
+  <testcase classname="| 250 |" name="And logs using the credentials" time="0.008">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 250 |" name="Given my checking account has balance greater than 250 before withdraw" time="0.023">
+    <skipped/>
+    <system-out>
+  #Login information for generic user so all scenarios will use the same starting point
+  Background:                            &amp;#27;[90m# Sample_bank.feature:9&amp;#27;[0m
+    &amp;#27;[33mGiven &amp;#27;[0m&amp;#27;[33ma user access the bank web app&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()&amp;#27;[0m
+      &amp;#27;[31mcucumber.api.PendingException: TODO: implement me
+      	at com.ClientA.cucumber.ZovixTest.AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app(AC_001_SampleBanking_StepDefinition.java:14)
+      	at ?.Given a user access the bank web app(Sample_bank.feature:10)
+      &amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mlogs using the credentials&amp;#27;[0m       &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| 250 |" name="When I withdraw 250 from my checking account" time="0.023">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 250 |" name="Then I should have less 250 as balance" time="0.023">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 250 |" name="| 250 |" time="0.023">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 250 |" name="| 250 |" time="0.023"/>
+  <testcase classname="| 1000 |" name="Given a user access the bank web app" time="0.003">
+    <skipped/>
+    <system-out>
+  @TC_002: @sign-off
+  Scenario Outline: Make a withdraw                                        &amp;#27;[90m# Sample_bank.feature:30&amp;#27;[0m
+    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mmy checking account has balance greater than &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m250&amp;#27;[0m&amp;#27;[36m before withdraw&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI withdraw &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m250&amp;#27;[0m&amp;#27;[36m from my checking account&amp;#27;[0m                           &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should have less &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m250&amp;#27;[0m&amp;#27;[36m as balance&amp;#27;[0m                                 &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| 1000 |" name="And logs using the credentials" time="0.005">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 1000 |" name="Given my checking account has balance greater than 1000 before withdraw" time="0.008">
+    <skipped/>
+    <system-out>
+  #Login information for generic user so all scenarios will use the same starting point
+  Background:                            &amp;#27;[90m# Sample_bank.feature:9&amp;#27;[0m
+    &amp;#27;[33mGiven &amp;#27;[0m&amp;#27;[33ma user access the bank web app&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()&amp;#27;[0m
+      &amp;#27;[31mcucumber.api.PendingException: TODO: implement me
+      	at com.ClientA.cucumber.ZovixTest.AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app(AC_001_SampleBanking_StepDefinition.java:14)
+      	at ?.Given a user access the bank web app(Sample_bank.feature:10)
+      &amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mlogs using the credentials&amp;#27;[0m       &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="| 1000 |" name="When I withdraw 1000 from my checking account" time="0.009">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 1000 |" name="Then I should have less 1000 as balance" time="0.01">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 1000 |" name="| 1000 |" time="0.01">
+    <skipped/>
+  </testcase>
+  <testcase classname="| 1000 |" name="| 1000 |" time="0.01"/>
+  <testcase classname="Scenario: Transfer funds" name="Given a user access the bank web app" time="0.003">
+    <skipped/>
+    <system-out>
+  @TC_002: @sign-off
+  Scenario Outline: Make a withdraw                                         &amp;#27;[90m# Sample_bank.feature:31&amp;#27;[0m
+    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mmy checking account has balance greater than &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1000&amp;#27;[0m&amp;#27;[36m before withdraw&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI withdraw &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1000&amp;#27;[0m&amp;#27;[36m from my checking account&amp;#27;[0m                           &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI should have less &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m1000&amp;#27;[0m&amp;#27;[36m as balance&amp;#27;[0m                                 &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="And logs using the credentials" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="Given Transfer page is loaded" time="0.007">
+    <skipped/>
+    <system-out>
+  #Login information for generic user so all scenarios will use the same starting point
+  Background:                            &amp;#27;[90m# Sample_bank.feature:9&amp;#27;[0m
+    &amp;#27;[33mGiven &amp;#27;[0m&amp;#27;[33ma user access the bank web app&amp;#27;[0m &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()&amp;#27;[0m
+      &amp;#27;[31mcucumber.api.PendingException: TODO: implement me
+      	at com.ClientA.cucumber.ZovixTest.AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app(AC_001_SampleBanking_StepDefinition.java:14)
+      	at ?.Given a user access the bank web app(Sample_bank.feature:10)
+      &amp;#27;[0m
+    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mlogs using the credentials&amp;#27;[0m       &amp;#27;[90m# AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="And form to transfer funds is populated" time="0.008">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="When I confirm to complete transfer operation" time="0.008">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="Then A confirmation is displayed" time="0.009">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="Scenario: Transfer funds" time="0.009">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Transfer funds" name="Scenario: Transfer funds" time="0.009"/>
+</testsuite>
