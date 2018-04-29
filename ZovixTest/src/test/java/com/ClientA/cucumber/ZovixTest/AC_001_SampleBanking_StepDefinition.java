@@ -1,26 +1,40 @@
 package com.ClientA.cucumber.ZovixTest;
 
+import java.util.List;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class AC_001_SampleBanking_StepDefinition {
-
+	WebDriver driver;
+	
 	@Given("^a user access the bank web app$")
 	public void a_user_access_the_bank_web_app() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new PendingException();
+		driver = new ChromeDriver();
+		driver.navigate().to("http://www.mykidsbank.org");
 	}
 
 	@Given("^logs using the credentials$")
-	public void logs_using_the_credentials(DataTable arg1) throws Throwable {
+	public void logs_using_the_credentials(DataTable table) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    // For automatic transformation, change DataTable to one of
 	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
-	    //throw new PendingException();
+	    List<List<String>> data = table.raw();
+	    
+	    driver.findElement(By.name("bank_id")).sendKeys(data.get(1).get(0));
+	    driver.findElement(By.name("username")).sendKeys(data.get(1).get(1));
+	    driver.findElement(By.name("password")).sendKeys(data.get(1).get(2));
+	    
+	    // click the login button
+	    driver.findElement(By.className("login_submit_button_class")).click();
 	}
 
 	@Given("^my checking account has a balance equal or greater than zero$")
@@ -30,9 +44,11 @@ public class AC_001_SampleBanking_StepDefinition {
 	}
 
 	@When("^I deposit (\\d+) to my checking account$")
-	public void i_deposit_to_my_checking_account(int arg1) throws Throwable {
+	public void i_deposit_to_my_checking_account(int deposit_value) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    //throw new PendingException();
+		driver.findElement(By.name("desc")).sendKeys("Weekly salary deposit");
+		driver.findElement(By.name("amount")).sendKeys(String.valueOf(deposit_value));
+		
 	}
 
 	@Then("^I should have additional (\\d+) as balance$")
@@ -55,8 +71,18 @@ public class AC_001_SampleBanking_StepDefinition {
 
 	@Then("^I should have less (\\d+) as balance$")
 	public void i_should_have_less_as_balance(int arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new PendingException();
+	    // Identify value from 2nd row in grid
+		String sAfterBalance = driver.findElement(By.id("2")).getText();
+		driver.close();
+		
+		// Convert value into double type
+		double dAfterBalance = 0.0;
+		sAfterBalance = sAfterBalance.replace("$", "");
+		sAfterBalance = sAfterBalance.replace(",", "");
+		sAfterBalance = sAfterBalance.trim();
+		dAfterBalance = Double.valueOf(sAfterBalance);
+		
+		//Assert.assertArrayEquals((dBeforeBalance - arg1), dAfterBalance, 0);
 	}
 
 	@Given("^Transfer page is loaded$")
