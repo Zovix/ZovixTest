@@ -7,8 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty", "json:target/cucumber-report.json", "html:target/cucumber-htmlreport"},
-		features = {"src/test/features"}
+		plugin = {"pretty", "json:target/cucumber-report.json", "html:target/cucumber-htmlreport"}
+		,features = {"src/test/features"}
+		,dryRun = false
+		,monochrome = true
+		,tags = {"@TC_001"}
 		)
 
 public class RunnerClassTest {

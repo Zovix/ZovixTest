@@ -17,7 +17,7 @@
         "steps": [
           {
             "result": {
-              "duration": 119297907,
+              "duration": 4050360433,
               "status": "passed"
             },
             "line": 10,
@@ -29,7 +29,7 @@
           },
           {
             "result": {
-              "duration": 1200113,
+              "duration": 1052337766,
               "status": "passed"
             },
             "line": 11,
@@ -71,7 +71,7 @@
         "steps": [
           {
             "result": {
-              "duration": 24238,
+              "duration": 60848588,
               "status": "passed"
             },
             "line": 17,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 2266597,
+              "duration": 1125871900,
               "status": "passed"
             },
             "line": 18,
@@ -101,8 +101,9 @@
           },
           {
             "result": {
-              "duration": 84834,
-              "status": "passed"
+              "duration": 26527514,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"id\",\"selector\":\"2\"}\n  (Session info: chrome\u003d66.0.3359.139)\n  (Driver info: chromedriver\u003d2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform\u003dWindows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027MICHAEL-PC\u0027, ip: \u0027192.168.1.100\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\\Users\\Michael\\AppData\\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}\nSession ID: e17d6cab035681b09aa0c991eb715982\n*** Element info: {Using\u003did, value\u003d2}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat com.ClientA.cucumber.ZovixTest.AC_001_SampleBanking_StepDefinition.i_should_have_additional_as_balance(AC_001_SampleBanking_StepDefinition.java:83)\r\n\tat ✽.Then I should have additional 1500 as balance(Sample_bank.feature:19)\r\n",
+              "status": "failed"
             },
             "line": 19,
             "name": "I should have additional 1500 as balance",
@@ -121,412 +122,11 @@
         "tags": [
           {
             "line": 15,
-            "name": "@TC_001:"
+            "name": "@TC_001"
           },
           {
             "line": 15,
             "name": "@in_progress"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 8,
-            "value": "#Login information for generic user so all scenarios will use the same starting point"
-          }
-        ],
-        "line": 9,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 46244,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "a user access the bank web app",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 33806,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "logs using the credentials",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "bank_id",
-                  "username",
-                  "password",
-                  "url"
-                ],
-                "line": 12
-              },
-              {
-                "cells": [
-                  "25967",
-                  "banker",
-                  "training",
-                  "http://mykidsbank.org"
-                ],
-                "line": 13
-              }
-            ],
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "line": 30,
-        "name": "Make a withdraw",
-        "description": "",
-        "id": "manage-simple-transactions-in-a-banking-account;make-a-withdraw;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 98866,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "my checking account has balance greater than 250 before withdraw",
-            "match": {
-              "arguments": [
-                {
-                  "val": "250",
-                  "offset": 45
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 70483,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I withdraw 250 from my checking account",
-            "match": {
-              "arguments": [
-                {
-                  "val": "250",
-                  "offset": 11
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 59958,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "I should have less 250 as balance",
-            "match": {
-              "arguments": [
-                {
-                  "val": "250",
-                  "offset": 19
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 22,
-            "name": "@TC_002:"
-          },
-          {
-            "line": 22,
-            "name": "@sign-off"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 8,
-            "value": "#Login information for generic user so all scenarios will use the same starting point"
-          }
-        ],
-        "line": 9,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 38590,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "a user access the bank web app",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 34125,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "logs using the credentials",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "bank_id",
-                  "username",
-                  "password",
-                  "url"
-                ],
-                "line": 12
-              },
-              {
-                "cells": [
-                  "25967",
-                  "banker",
-                  "training",
-                  "http://mykidsbank.org"
-                ],
-                "line": 13
-              }
-            ],
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "line": 31,
-        "name": "Make a withdraw",
-        "description": "",
-        "id": "manage-simple-transactions-in-a-banking-account;make-a-withdraw;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 184338,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "my checking account has balance greater than 1000 before withdraw",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1000",
-                  "offset": 45
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 59639,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "I withdraw 1000 from my checking account",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1000",
-                  "offset": 11
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 66974,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "I should have less 1000 as balance",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1000",
-                  "offset": 19
-                }
-              ],
-              "location": "AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 22,
-            "name": "@TC_002:"
-          },
-          {
-            "line": 22,
-            "name": "@sign-off"
-          }
-        ]
-      },
-      {
-        "comments": [
-          {
-            "line": 8,
-            "value": "#Login information for generic user so all scenarios will use the same starting point"
-          }
-        ],
-        "line": 9,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 34125,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "a user access the bank web app",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 28703,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "logs using the credentials",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "bank_id",
-                  "username",
-                  "password",
-                  "url"
-                ],
-                "line": 12
-              },
-              {
-                "cells": [
-                  "25967",
-                  "banker",
-                  "training",
-                  "http://mykidsbank.org"
-                ],
-                "line": 13
-              }
-            ],
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "line": 33,
-        "name": "Transfer funds",
-        "description": "",
-        "id": "manage-simple-transactions-in-a-banking-account;transfer-funds",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 35401,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "Transfer page is loaded",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.transfer_page_is_loaded()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 16584,
-              "status": "passed"
-            },
-            "line": 35,
-            "name": "form to transfer funds is populated",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.form_to_transfer_funds_is_populated()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 20730,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "I confirm to complete transfer operation",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.i_confirm_to_complete_transfer_operation()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 23600,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "A confirmation is displayed",
-            "match": {
-              "location": "AC_001_SampleBanking_StepDefinition.a_confirmation_is_displayed()"
-            },
-            "keyword": "Then "
           }
         ]
       }
