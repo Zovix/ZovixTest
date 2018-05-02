@@ -1,10 +1,10 @@
 package com.ClientA.cucumber.ZovixTest;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,6 +12,9 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects.AccountPage;
+import pageObjects.DepositPage;
+import pageObjects.HomePage;
 
 public class AC_001_SampleBanking_StepDefinition {
 	WebDriver driver;
@@ -20,62 +23,52 @@ public class AC_001_SampleBanking_StepDefinition {
 	@Given("^a user access the bank web app$")
 	public void a_user_access_the_bank_web_app() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "D:/My Development/chromedriver_win32/chromedriver.exe");
-		
 		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.navigate().to("http://www.mykidsbank.org");
 	}
 
 	@Given("^logs using the credentials$")
 	public void logs_using_the_credentials(DataTable table) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
 	    List<List<String>> data = table.raw();
+	    HomePage home = new HomePage(driver);
 	    
-	    driver.findElement(By.name("bank_id")).sendKeys(data.get(1).get(0));
-	    driver.findElement(By.name("username")).sendKeys(data.get(1).get(1));
-	    driver.findElement(By.name("password")).sendKeys(data.get(1).get(2));
-	    
-	    // click the login button ADD ASSERT TO ENSURE THE CONFIRMATION PAGE LOADS
-	    driver.findElement(By.className("login_submit_button_class")).click();
+	    home.enter_BankID(data.get(1).get(0));
+	    home.enter_Username(data.get(1).get(1));
+	    home.enter_Password(data.get(1).get(2));
+	   
+	    home.ClickON_Login();
 	}
 
 	@Given("^my checking account has a balance equal or greater than zero$")
 	public void my_checking_account_has_a_balance_equal_or_greater_than_zero() throws Throwable {
-		String sBalance = driver.findElement(By.id("2")).getText();
-		
-		// Convert value into double type
-		double dBalance = 0.0;
-		sBalance = sBalance.replace("$", "");
-		sBalance = sBalance.replace(",", "");
-		sBalance = sBalance.trim();
-		dBalance = Double.valueOf(sBalance);
-		
-		Assert.assertTrue(dBalance >= 0.0);
+		AccountPage acct = new AccountPage(driver);
+				
+		Assert.assertTrue(acct.getBalance() >= 0.0);
 	}
 
 	@When("^I deposit (\\d+) to my checking account$")
 	public void i_deposit_to_my_checking_account(int deposit_value) throws Throwable {
-	    // Record the starting balance
-		String sOldBalance = driver.findElement(By.id("2")).getText();
+		AccountPage acct = new AccountPage(driver);
 		
-		// Convert value into double type
-		sOldBalance = sOldBalance.replace("$", "");
-		sOldBalance = sOldBalance.replace(",", "");
-		sOldBalance = sOldBalance.trim();
-		dBeforeBalance = Double.valueOf(sOldBalance);
+		// Record the starting balance
+		dBeforeBalance = acct.getBalance();
 		
 		// Click on the link to make deposits
-		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/table/tbody/tr[3]/td[3]/table/tbody/tr/td[3]/table/tbody/tr[3]/td/span")).click();
+		acct.click_Deposit();	
+		
+		DepositPage dep = new DepositPage(driver);
 		
 		// Enter deposit description, amount, check the "checking-account" checkbox and submit the deposit
-		driver.findElement(By.name("desc")).sendKeys("Weekly salary deposit");
-		driver.findElement(By.name("amount")).sendKeys(String.valueOf(deposit_value));
-		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/table/tbody/tr[3]/td[3]/form/table/tbody/tr/td/table/tbody/tr[10]/td/table/tbody/tr/td[1]/span")).click();
-
+		dep.enter_Description("Weekly salary deposit");
+		dep.enter_Amount(String.valueOf(deposit_value));
+		dep.check_Checking();
+		
+		// Submit the deposit
+		dep.ClickON_Submit();
+		
 		// Deposit Confirmation page submit
-		//driver.findElement(By.className("white_submit_button_class")).click();
+		dep.ClickON_SubmitConfirm();
 	}
 
 	@Then("^I should have additional (\\d+) as balance$")
@@ -124,11 +117,14 @@ public class AC_001_SampleBanking_StepDefinition {
 		// Enter deposit description, amount, check the "checking-account" check-box and submit the deposit
 		driver.findElement(By.name("desc")).sendKeys("cash needed");
 		driver.findElement(By.name("amount")).sendKeys(String.valueOf(withdrawn_amount));
+		Thread.sleep(1000);
 		driver.findElement(By.id("a0")).click();
-		driver.findElement(By.className("white_submit_button_class")).click();
+				
+		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/table/tbody/tr[3]/td[3]/form/table/tbody/tr/td/table/tbody/tr[10]/td/table/tbody/tr/td[1]/span")).click();
+		Thread.sleep(1000);
 		
 		// Deposit Confirmation page submit
-		driver.findElement(By.className("white_submit_button_class")).click();
+		driver.findElement(By.xpath("/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/table/tbody/tr[3]/td[3]/table/tbody/tr/td/table/tbody/tr[6]/td/div[2]/span[1]")).click();
 	}
 
 	@Then("^I should have less (\\d+) as balance$")
