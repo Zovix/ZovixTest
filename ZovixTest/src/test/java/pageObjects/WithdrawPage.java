@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class DepositPage {
+public class WithdrawPage {
 	WebDriver driver;
 	
-	public DepositPage(WebDriver driver) {
+	public WithdrawPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

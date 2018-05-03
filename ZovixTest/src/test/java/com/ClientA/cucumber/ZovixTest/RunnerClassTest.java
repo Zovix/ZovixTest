@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		,features = {"src/test/features"}
 		,dryRun = false
 		,monochrome = true
-		,tags = {"@TC_001"}
+		,tags = {"@TC_001, @TC_002"}
 		)
 
 public class RunnerClassTest {
