@@ -1,18 +1,16 @@
 package com.ClientA.cucumber.ZovixTest;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import managers.FileReaderManager;
 import managers.PageObjectManager;
+import managers.WebDriverManager;
 import pageObjects.AccountPage;
 import pageObjects.DepositPage;
 import pageObjects.HomePage;
@@ -25,13 +23,13 @@ public class AC_001_SampleBanking_StepDefinition {
 	DepositPage deposit;
 	WithdrawPage withdraw;
 	PageObjectManager pageObjManager;
+	WebDriverManager webDriverManager;
 	double dBeforeBalance = 0.0;
 	
 	@Given("^a user access the bank web app$")
 	public void a_user_access_the_bank_web_app() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);			
+		webDriverManager = new WebDriverManager();
+		driver = webDriverManager.getDriver();		
 		pageObjManager = new PageObjectManager(driver);
 		home = pageObjManager.getHomePage();
 		home.navigateToHomePage();
@@ -81,7 +79,7 @@ public class AC_001_SampleBanking_StepDefinition {
 		acct = pageObjManager.getAccountPage();
 		
 		Assert.assertTrue(dBeforeBalance + deposit_value == acct.getBalance());
-		driver.quit(); // end of TC_001
+		webDriverManager.closeDriver(); // end of TC_001
 	}
 
 	@Given("^my checking account has balance greater than (\\d+) before withdraw$")
@@ -118,7 +116,7 @@ public class AC_001_SampleBanking_StepDefinition {
 		acct = pageObjManager.getAccountPage();
 		
 		Assert.assertEquals((dBeforeBalance - arg1), acct.getBalance(), 0);
-		driver.quit(); // end of TC_002
+		webDriverManager.closeDriver(); // end of TC_002
 	}
 
 	@Given("^Transfer page is loaded$")
