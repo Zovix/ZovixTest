@@ -11,6 +11,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import managers.FileReaderManager;
 import managers.PageObjectManager;
 import pageObjects.AccountPage;
 import pageObjects.DepositPage;
@@ -28,10 +29,9 @@ public class AC_001_SampleBanking_StepDefinition {
 	
 	@Given("^a user access the bank web app$")
 	public void a_user_access_the_bank_web_app() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "D:/My Development/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				
+		driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);			
 		pageObjManager = new PageObjectManager(driver);
 		home = pageObjManager.getHomePage();
 		home.navigateToHomePage();
@@ -81,6 +81,7 @@ public class AC_001_SampleBanking_StepDefinition {
 		acct = pageObjManager.getAccountPage();
 		
 		Assert.assertTrue(dBeforeBalance + deposit_value == acct.getBalance());
+		driver.quit(); // end of TC_001
 	}
 
 	@Given("^my checking account has balance greater than (\\d+) before withdraw$")
@@ -117,6 +118,7 @@ public class AC_001_SampleBanking_StepDefinition {
 		acct = pageObjManager.getAccountPage();
 		
 		Assert.assertEquals((dBeforeBalance - arg1), acct.getBalance(), 0);
+		driver.quit(); // end of TC_002
 	}
 
 	@Given("^Transfer page is loaded$")

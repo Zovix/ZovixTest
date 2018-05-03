@@ -53,14 +53,14 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
 });
 formatter.result({
-  "duration": 3964607338,
+  "duration": 4777931181,
   "status": "passed"
 });
 formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
 });
 formatter.result({
-  "duration": 953738706,
+  "duration": 996609831,
   "status": "passed"
 });
 formatter.scenario({
@@ -100,7 +100,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.my_checking_account_has_a_balance_equal_or_greater_than_zero()"
 });
 formatter.result({
-  "duration": 80869082,
+  "duration": 95000634,
   "status": "passed"
 });
 formatter.match({
@@ -113,7 +113,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_deposit_to_my_checking_account(int)"
 });
 formatter.result({
-  "duration": 2795700704,
+  "duration": 3142441949,
   "status": "passed"
 });
 formatter.match({
@@ -126,7 +126,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_should_have_additional_as_balance(int)"
 });
 formatter.result({
-  "duration": 33441162,
+  "duration": 673918056,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -245,14 +245,14 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
 });
 formatter.result({
-  "duration": 2862642029,
+  "duration": 2960902710,
   "status": "passed"
 });
 formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
 });
 formatter.result({
-  "duration": 1023580012,
+  "duration": 1024949794,
   "status": "passed"
 });
 formatter.scenario({
@@ -307,7 +307,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)"
 });
 formatter.result({
-  "duration": 40308566,
+  "duration": 41294362,
   "status": "passed"
 });
 formatter.match({
@@ -320,7 +320,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
 });
 formatter.result({
-  "duration": 2877522734,
+  "duration": 2923429065,
   "status": "passed"
 });
 formatter.match({
@@ -333,7 +333,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
 });
 formatter.result({
-  "duration": 30801741,
+  "duration": 681457435,
   "status": "passed"
 });
 formatter.background({
@@ -383,14 +383,14 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.a_user_access_the_bank_web_app()"
 });
 formatter.result({
-  "duration": 3264536824,
+  "duration": 2939779693,
   "status": "passed"
 });
 formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.logs_using_the_credentials(DataTable)"
 });
 formatter.result({
-  "duration": 1087443714,
+  "duration": 996971492,
   "status": "passed"
 });
 formatter.scenario({
@@ -445,7 +445,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.my_checking_account_has_balance_greater_than_before_withdraw(int)"
 });
 formatter.result({
-  "duration": 60301633,
+  "duration": 80487330,
   "status": "passed"
 });
 formatter.match({
@@ -458,7 +458,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_withdraw_from_my_checking_account(int)"
 });
 formatter.result({
-  "duration": 2738861956,
+  "duration": 2938437340,
   "status": "passed"
 });
 formatter.match({
@@ -471,7 +471,7 @@ formatter.match({
   "location": "AC_001_SampleBanking_StepDefinition.i_should_have_less_as_balance(int)"
 });
 formatter.result({
-  "duration": 38373012,
+  "duration": 674834645,
   "status": "passed"
 });
 });

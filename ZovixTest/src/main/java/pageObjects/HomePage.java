@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import managers.FileReaderManager;
+
 public class HomePage {
 	WebDriver driver;
 	
@@ -27,7 +29,7 @@ public class HomePage {
 	private WebElement button_Login;
 	
 	public void navigateToHomePage() {
-		driver.navigate().to("http://www.mykidsbank.org");
+		driver.navigate().to(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 	
 	public void enter_BankID(String value) {
